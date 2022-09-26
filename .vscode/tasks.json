@@ -6,6 +6,7 @@
             "dependsOn": [
                 "Start Ganache",
                 "Save Ganache endpoint to file",
+                "Set Ganache port forwarding to public", // comment this task if running locally
                 "Compile smart contracts",
                 "Deploy smart contracts to Ganache",
                 "npm: install",
@@ -37,10 +38,16 @@
         {
             "label": "Save Ganache endpoint to file",
             "type": "shell",
-            "command": "echo \"$CODESPACE_NAME\" > src/codespace.txt",
+            "command": "echo \"https://${CODESPACE_NAME}-7545.githubpreview.dev\" > src/ganache.txt",
             "options": {
                 "cwd": "${workspaceFolder}"
             }
+        },
+        {
+            "label": "Set Ganache port forwarding to public",
+            "type": "shell",
+            // Currently hardcoded to 7545. It is possible to dynamically retrieve it from config file if we have a VSC extension
+            "command": "gh codespace ports visibility 7545:public -c $CODESPACE_NAME"
         },
         {
             "label": "Compile smart contracts",

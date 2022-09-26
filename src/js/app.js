@@ -1,11 +1,8 @@
-async function getCodespaceGanacheUrl() {
+async function getGanacheUrl() {
   // Get Codespace forwarded endpoint for Ganache
-  const response = await fetch('../codespace.txt');
-  const codespaceName = await response.text();
-  // NOTE: currently hard code to 7545. We can get from config file.
-  const port = 7545;
-  const endpoint = `https://${codespaceName}-${port}.githubpreview.dev`;
-  return endpoint;
+  const response = await fetch('../ganache.txt');
+  const url = await response.text();
+  return url.trim();
 }
 
 App = {
@@ -34,7 +31,7 @@ App = {
   },
 
   initWeb3: async function () {
-    const ganacheEndpoint = await getCodespaceGanacheUrl();
+    const ganacheEndpoint = await getGanacheUrl();
     // Modern dapp browsers...
     // if (window.ethereum) {
     //   App.web3Provider = window.ethereum;

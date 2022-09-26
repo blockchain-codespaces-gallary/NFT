@@ -5,6 +5,7 @@
             "label": "Start all",
             "dependsOn": [
                 "Start Ganache",
+                "Save Ganache endpoint to file",
                 "Compile smart contracts",
                 "Deploy smart contracts to Ganache",
                 "npm: install",
@@ -31,6 +32,14 @@
                     "beginsPattern": ".*",
                     "endsPattern": "RPC Listening on",
                 }
+            }
+        },
+        {
+            "label": "Save Ganache endpoint to file",
+            "type": "shell",
+            "command": "echo \"$CODESPACE_NAME\" > src/codespace.txt",
+            "options": {
+                "cwd": "${workspaceFolder}"
             }
         },
         {

@@ -3,8 +3,8 @@ FROM ubuntu:latest
 # Install prerequisites
 RUN apt-get update && apt-get install -y curl
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs git 
-RUN npm install -g truffle ganache-cli
+RUN apt-get install -y nodejs git lsof
+RUN npm install -g truffle ganache
 
 # Setup users according to VSCode document: https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user
 ARG USERNAME=docker

@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start all",
+            "dependsOn": [
+                "Start Ganache",
+                "Compile smart contracts",
+                "Deploy smart contracts to Ganache",
+                "npm: install",
+                "npm: dev"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Start Ganache",
+            "type": "shell",
+            "command": "npx ganache --host 0.0.0.0 --port 7545",
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": [
+                    {
+                        "regexp": "^.*$",
+                        "file": 0,
+                        "location": 0,
+                        "message": 0,
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "RPC Listening on",
+                }
+            }
+        },
+        {
+            "label": "Compile smart contracts",
+            "type": "shell",
+            "command": "npx truffle compile"
+        },
+        {
+            "label": "Deploy smart contracts to Ganache",
+            "type": "shell",
+            "command": "npx truffle migrate"
+        },
+    ]
+}

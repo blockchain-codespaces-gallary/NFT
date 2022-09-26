@@ -17,7 +17,7 @@
         {
             "label": "Start Ganache",
             "type": "shell",
-            "command": "npx ganache --host 0.0.0.0 --port 7545",
+            "command": "npx ganache --host 0.0.0.0 --port 8545",
             "isBackground": true,
             "problemMatcher": {
                 "pattern": [
@@ -38,7 +38,7 @@
         {
             "label": "Save Ganache endpoint to file",
             "type": "shell",
-            "command": "echo \"https://${CODESPACE_NAME}-7545.githubpreview.dev\" > src/ganache.txt",
+            "command": "echo \"https://${CODESPACE_NAME}-8545.githubpreview.dev\" > src/ganache.txt",
             "options": {
                 "cwd": "${workspaceFolder}"
             }
@@ -46,8 +46,8 @@
         {
             "label": "Set Ganache port forwarding to public",
             "type": "shell",
-            // Currently hardcoded to 7545. It is possible to dynamically retrieve it from config file if we have a VSC extension
-            "command": "gh codespace ports visibility 7545:public -c $CODESPACE_NAME"
+            // Currently hardcoded to 8545. It is possible to dynamically retrieve it from config file if we have a VSC extension
+            "command": "gh codespace ports visibility 8545:public -c $CODESPACE_NAME"
         },
         {
             "label": "Compile smart contracts",

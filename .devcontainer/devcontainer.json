@@ -10,7 +10,7 @@
 	"dockerFile": "../Dockerfile",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000, 3001, 7545],
+	"forwardPorts": [3000, 3001, 8545],
 
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
 	// "postCreateCommand": "./start.sh",

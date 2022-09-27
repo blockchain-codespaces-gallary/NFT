@@ -2,12 +2,27 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch frontend",
+            "name": "Launch Frontend",
             "request": "launch",
             "type": "chrome",
             "url": "http://localhost:3000",
             "webRoot": "${workspaceFolder}",
             "preLaunchTask": "Start all"
+        },
+        {
+            "name": "Debug Unit Test",
+            "request": "launch",
+            "type": "node",
+            "runtimeExecutable": "npx",
+            "runtimeArgs": [
+                "truffle",
+                "test"
+            ],
+            "cwd": "${workspaceRoot}",
+            "outFiles": [
+                "${workspaceRoot}/test/**/*"
+            ],
+            "preLaunchTask": "Prepare running test"
         },
     ]
 }

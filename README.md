@@ -1,5 +1,7 @@
 # NFT
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=541882458&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
+
 A non-fungible token (NFT) is a record on a blockchain which is associated with a particular digital or physical asset. 
 
 This repo will enable you to build a simple NFT marketplace like [opensea.io](https://opensea.io/) with Truffle, Ganache and NodeJS as frontend.

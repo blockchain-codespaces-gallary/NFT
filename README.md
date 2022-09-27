@@ -1,12 +1,12 @@
-# Pet Shop
+# NFT
 
 ## Start the App
 
-1. Click F5 to start the pet shop app.
+1. Click F5 to start the NFT app.
 
 ## Debug Transactions
 
-**Truffle** VS Code Extension is pre-installed in the container. After the pet shop app is started and a pet is adopted, you can debug (replay) existing transactions.
+**Truffle** VS Code Extension is pre-installed in the container. After the NFT app is started and a pet is adopted, you can debug (replay) existing transactions.
 
 The steps to debug transactions are:
 

@@ -1,0 +1,1 @@
+FROM aochengwangmsft/nft:latest

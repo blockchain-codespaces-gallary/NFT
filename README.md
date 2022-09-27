@@ -8,11 +8,13 @@ This repo will enable you to build a simple NFT marketplace like [opensea.io](ht
 
 Here is a screen shot of the DApp running.
 
+![screen shot](docs/screenshot.jpg)
+
 ## Getting Started
 
 Create Codespaces on main branch and start.
 
-Run your app with local debugging by pressing `F5` in VSCode. Or `Run and Debug` and select `Launch frontend`.
+Run your app with local debugging by pressing `F5` in VSCode. Or `Run and Debug` and select `Launch Frontend`.
 
 **Congratulations**! You are running an NFT marketplace that users can get a Free NFT as giveaways.
 

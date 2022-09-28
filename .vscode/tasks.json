@@ -7,6 +7,7 @@
                 "Start Ganache",
                 "Save Ganache endpoint to file",
                 "Set Ganache port forwarding to public", // comment this task if running locally
+                "Start Ganache CLI Block Explorer",
                 "Compile smart contracts",
                 "Deploy smart contracts to Ganache",
                 "npm: install",
@@ -54,6 +55,35 @@
             "type": "shell",
             // Currently hardcoded to 8545. It is possible to dynamically retrieve it from config file if we have a VSC extension
             "command": "gh codespace ports visibility 8545:public -c $CODESPACE_NAME"
+        },
+        {
+            "label": "Start Ganache CLI Block Explorer",
+            "type": "shell",
+            "command": "./ganache-cli-block-explorer",
+            "options": {
+                "cwd": "/ganache-cli-block-explorer"
+            },
+            "isBackground": true,
+            "problemMatcher": {
+                "pattern": [
+                    {
+                        "regexp": "^.*$",
+                        "file": 0,
+                        "location": 0,
+                        "message": 0,
+                    }
+                ],
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "SERVER STARTED",
+                }
+            }
+        },
+        {
+            "label": "Open Ganache CLI Block Explorer in Browser",
+            "type": "shell",
+            "command": "open-cli http://localhost:5051",
         },
         {
             "label": "Compile smart contracts",

@@ -1,0 +1,3 @@
+[submodule "3rdparty/ganache-cli-block-explorer"]
+	path = 3rdparty/ganache-cli-block-explorer
+	url = https://github.com/awasthivinay/ganache-cli-block-explorer.git

@@ -8,11 +8,11 @@
 
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 	// Use pre-built image to accelerate build speed. You can also you Dockerfile to build.
-	"image": "aochengwangmsft/nft:latest",
+	"image": "aochengwangmsft/nft:v3",
 	// "dockerFile": "../Dockerfile",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [3000, 3001, 8545],
+	"forwardPorts": [3000, 3001, 5051, 8545],
 
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
 	// "postCreateCommand": "./start.sh",

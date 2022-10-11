@@ -8,7 +8,7 @@
 
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 	// Use pre-built image to accelerate build speed. You can also you Dockerfile to build.
-	"image": "aochengwangmsft/nft:v3",
+	"image": "aochengwangmsft/nft:v4",
 	// "dockerFile": "../Dockerfile",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

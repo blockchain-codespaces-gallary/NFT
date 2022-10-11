@@ -13,7 +13,8 @@ jobs:
       - name: Mythril code check
         run: |-
           # TODO: fix assertion issue
-          myth contracts/Adoption.sol || true
+          pip3 install mythril
+          myth analyze contracts/Adoption.sol || true
       - name: deploy
         env:
           INFURA_API_KEY: ${{ secrets.INFURA_API_KEY }}  

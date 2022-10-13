@@ -5,8 +5,8 @@
             "label": "Start all",
             "dependsOn": [
                 "Start Ganache",
-                "Save Ganache endpoint to file",         // comment this task if running locally
-                "Set Ganache port forwarding to public", // comment this task if running locally
+                // "Save Ganache endpoint to file",         // comment this task if running locally
+                // "Set Ganache port forwarding to public", // comment this task if running locally
                 "Start Ganache CLI Block Explorer",
                 "Open Ganache CLI Block Explorer in Browser",
                 "npm: install",                          // install npm dependencies before smart contracts deployment

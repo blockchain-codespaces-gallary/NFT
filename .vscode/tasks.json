@@ -8,6 +8,7 @@
                 "Save Ganache endpoint to file",
                 "Set Ganache port forwarding to public", // comment this task if running locally
                 "Start Ganache CLI Block Explorer",
+                "Open Ganache CLI Block Explorer in Browser",
                 "npm: install", // needs packages to deploy smart contracts
                 "Compile smart contracts",
                 "Deploy smart contracts to Ganache",

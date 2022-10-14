@@ -1,3 +1,9 @@
+# How to build this docker image
+# 1. Install Go (tested with 1.19). Because the block explorer is written in Go.
+# 2. cd 3rdparty/ganache-cli-block-explorer 
+# 3. Run `go build`. Then you will have the executable file 3rdparty/ganache-cli-block-explorer/ganache-cli-block-explorer
+# 4. docker build .
+
 FROM ubuntu:focal
 # Do not use latest Ubuntu because mythril requires blake2b-py which requires python3 <= 3.9 which is in <= focal
 

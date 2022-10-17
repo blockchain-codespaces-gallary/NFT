@@ -15,10 +15,16 @@ jobs:
           # TODO: fix assertion issue
           pip3 install mythril
           myth analyze contracts/Adoption.sol || true
-      - name: deploy
+      - name: Run unit tests
+        run: |- 
+          npm install
+          npx ganache -p 8545 > /dev/null &
+          npx truffle migrate --network development
+          npx truffle test --network development
+          kill $(lsof -t -i:8545)
+      - name: Deploy to Goerli testnet
         env:
           INFURA_API_KEY: ${{ secrets.INFURA_API_KEY }}  
           MNEMONIC: ${{ secrets.MNEMONIC }}
         run: |-
-          npm install
           npx truffle migrate --network staging
